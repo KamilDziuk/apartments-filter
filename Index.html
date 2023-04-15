@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<script src="script.js"></script>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Filtry mieszkań</title>
+  <style>
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input {
+      width: 100px;
+    }
+    button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Filtry mieszkań</h1>
+  <form>
+    <label>
+      Cena:
+      <input type="number" id="cenaOd" placeholder="Od"> -
+      <input type="number" id="cenaDo" placeholder="Do">
+    </label>
+    <label>
+      Powierzchnia:
+      <input type="number" id="powOd" placeholder="Od"> -
+      <input type="number" id="powDo" placeholder="Do">
+    </label>
+    <label>
+      Piętra:
+       <input type="number" id="floorsOd" placeholder="Od"> -
+       <input type="number" id="floorsDo" placeholder="Do">
+     </label>
+     <label>
+
+     </label>
+    <button type="button" onclick="wybierzMieszkania()">Wybierz</button>
+  </form>
+  <div id="wyniki"></div>
+
+</body>
+</html>
