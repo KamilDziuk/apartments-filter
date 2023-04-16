@@ -42,7 +42,7 @@
         { cena: 200000, powierzchnia: 60, floors: 0, link: "http://mieszkanie1.pl" },
         { cena: 250000, powierzchnia: 80, floors: 1, link: "http://mieszkanie2.pl" },
         { cena: 300000, powierzchnia: 100,floors: 2, link: "http://mieszkanie3.pl" },
-        { cena: 350000, powierzchnia: 120,floors: 3, link: "http://mieszkanie4.pl" }
+        { cena: 350000, powierzchnia: 120,floors: 4, link: "http://mieszkanie4.pl" }
       ];
   
       // Funkcja wybierająca mieszkania zgodnie z kryteriami
