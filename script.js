@@ -15,7 +15,7 @@
         var powDo = Number(document.getElementById("powDo").value);
         var floorsOd = Number(document.getElementById("floorsOd").value);
         var floorsDo = Number(document.getElementById("floorsDo").value);
-          var building = document.getElementById("building");
+        var building = document.getElementById("building");
      
   
         var wyniki = document.getElementById("wyniki");
@@ -29,10 +29,10 @@
               (floorsDo === "" || mieszkanie.floors <= floorsDo) &&
               (floorsOd === "" || mieszkanie.floors >= floorsOd)) {
             var mieszkanieElement = document.createElement("div");
-            mieszkanieElement.innerHTML = "Cena: " + mieszkanie.cena + "zł | " + "Powierzchnia: "+ mieszkanie.powierzchnia + " m<sup>2</sup> | " + " Piętro: " + mieszkanie.floors +" | Budynek: "+ mieszkanie.building + "| <a href='" + mieszkanie.link + "' target='_blank'>Zobacz wynik wyszukiwania</a> ";
+            mieszkanieElement.innerHTML = "Cena: " + mieszkanie.cena + "zł | " + "Powierzchnia: "+ 
+            mieszkanie.powierzchnia + " m<sup>2</sup> | " + " Piętro: " + mieszkanie.floors +" | Budynek: "+ 
+            mieszkanie.building + "| <a href='" + mieszkanie.link + "' target='_blank'>Zobacz wynik wyszukiwania</a> ";
             wyniki.appendChild(mieszkanieElement);
-
           }
         });
       }
-
