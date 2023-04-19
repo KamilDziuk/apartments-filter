@@ -28,7 +28,7 @@
         { price: 200000, surface: 62.31, floors: 4, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m3-p4/" },
         { price: 200000, surface: 52.19, floors: 4, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m4-p4/" },
      
-
+        { price: 200000, surface: 58.80, floors: 0, building: "B", link: "https://osiedle-paderewskiego.pl/budynek-b-m1/" },
     
      
       ];
