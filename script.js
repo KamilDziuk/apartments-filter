@@ -7,26 +7,26 @@
         { price: 350000, surface: 48.60,floors: 0, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m4/" },
       
         { price: 200000, surface: 52.35, floors: 1, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m1-p1/" },
-        { price: 200000, surface: 52.35, floors: 1, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m2-p1/" },
-        { price: 200000, surface: 52.35, floors: 1, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m3-p1/" },
-        { price: 200000, surface: 52.35, floors: 1, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m4-p1/" },
-        { price: 200000, surface: 52.35, floors: 1, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m5-p1/" },
+        { price: 200000, surface: 56.09, floors: 1, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m2-p1/" },
+        { price: 200000, surface: 30.16, floors: 1, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m3-p1/" },
+        { price: 200000, surface: 49.31, floors: 1, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m4-p1/" },
+        { price: 200000, surface: 48.60, floors: 1, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m5-p1/" },
 
-        { price: 200000, surface: 52.35, floors: 2, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m1-p2/" },
-        { price: 200000, surface: 52.35, floors: 2, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m2-p2/" },
-        { price: 200000, surface: 52.35, floors: 2, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m3-p2/" },
-        { price: 200000, surface: 52.35, floors: 2, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m4-p2/" },
+        { price: 200000, surface: 58.56, floors: 2, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m1-p2/" },
+        { price: 200000, surface: 70.70, floors: 2, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m2-p2/" },
+        { price: 200000, surface: 62.31, floors: 2, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m3-p2/" },
+        { price: 200000, surface: 52.19, floors: 2, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m4-p2/" },
   
-        { price: 200000, surface: 52.35, floors: 3, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m1-p3/" },
-        { price: 200000, surface: 52.35, floors: 3, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m2-p3/" },
-        { price: 200000, surface: 52.35, floors: 3, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m3-p3/" },
-        { price: 200000, surface: 52.35, floors: 3, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m4-p3/" },
+        { price: 200000, surface: 58.56, floors: 3, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m1-p3/" },
+        { price: 200000, surface: 70.70, floors: 3, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m2-p3/" },
+        { price: 200000, surface: 62.31, floors: 3, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m3-p3/" },
+        { price: 200000, surface: 52.19, floors: 3, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m4-p3/" },
 
 
-        { price: 200000, surface: 52.35, floors: 4, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m1-p4/" },
-        { price: 200000, surface: 52.35, floors: 4, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m2-p4/" },
-        { price: 200000, surface: 52.35, floors: 4, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m3-p4/" },
-        { price: 200000, surface: 52.35, floors: 4, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m4-p4/" },
+        { price: 200000, surface: 58.56, floors: 4, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m1-p4/" },
+        { price: 200000, surface: 70.70, floors: 4, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m2-p4/" },
+        { price: 200000, surface: 62.31, floors: 4, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m3-p4/" },
+        { price: 200000, surface: 52.19, floors: 4, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m4-p4/" },
      
 
     
