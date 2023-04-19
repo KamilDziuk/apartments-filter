@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-  <title>Filtry mieszkań</title>
+  <title>Apartment filters</title>
   <style>
     label {
       display: block;
@@ -20,23 +20,23 @@
   </style>
 </head>
 <body>
-    
     <form>
     <label>
-    <!-- Cena: -->
+    <!-- Price: -->
     <input type="number" id="cenaOd" placeholder="Cena  "> -
     <input type="number" id="cenaDo" placeholder="do">
     </label>
     <label>
-    <!-- m<sup>2</sup>: -->
+    <!--Surface:-->
     <input type="number" id="powOd" placeholder="Powierzchnia od"> -
     <input type="number" id="powDo" placeholder="do">
     </label>
     <label>
-    <!-- Piętra: -->
+    <!-- Floors: -->
     <input type="number" id="floorsOd" placeholder="Piętra od"> -
     <input type="number" id="floorsDo" placeholder="do">
     </label>
+    <!-- Button -->
     <button type="button" onclick="selectApartments()">Wybierz</button>
     </form>
     <div id="result"></div>
