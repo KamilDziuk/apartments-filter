@@ -88,8 +88,8 @@
       ];
       // A function that selects apartments according to criteria
       function selectApartments() {
-        var buildingOd = (document.getElementById("buildingOd").value);
-        var buildingDo = (document.getElementById("buildingDo").value);
+        var building = (document.getElementById("building").value);
+        // var buildingDo = (document.getElementById("buildingDo").value);
         var cenaOd = Number(document.getElementById("cenaOd").value);
         var cenaDo = Number(document.getElementById("cenaDo").value);
         var powOd = Number(document.getElementById("powOd").value);
@@ -100,8 +100,8 @@
         result.innerHTML = "";
         apartments.forEach(function(apartment) {
           if (
-            (buildingOd === "" || apartment.building >= buildingOd) &&
-            (buildingDo === "" || apartment.building <= buildingDo) &&
+            apartment.building === building &&
+            // (buildingDo === "" || apartment.building <= buildingDo) &&
             (cenaOd === "" || apartment.price >= cenaOd) &&
               (cenaDo === "" || apartment.price <= cenaDo) &&
               (powOd === "" || apartment.surface >= powOd) &&
