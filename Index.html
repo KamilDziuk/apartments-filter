@@ -6,21 +6,14 @@
   <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
   <title>Apartment filters</title>
-  <style>
-    label {
-      display: block;
-      margin-bottom: 10px;
-    }
-    input {
-      width: 100px;
-    }
-    button {
-      margin-top: 10px;
-    }
-  </style>
 </head>
 <body>
     <form>
+      <label>
+       <!-- Building -->
+    <input type="text" id="buildingOd" placeholder="Budynek od"> -  
+    <input type="text" id="buildingDo" placeholder=" do"> 
+      </label>
     <label>
     <!-- Price: -->
     <input type="number" id="cenaOd" placeholder="Cena  "> -
@@ -40,5 +33,6 @@
     <button type="button" onclick="selectApartments()">Wybierz</button>
     </form>
     <div id="result"></div>
+  
     </body>
     </html>

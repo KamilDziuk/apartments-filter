@@ -1,0 +1,77 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Filtry mieszkań</title>
+    <style>
+      label {
+        display: inline-block;
+        width: 100px;
+        text-align: right;
+        margin-right: 10px;
+      }
+      input[type="text"] {
+        width: 200px;
+      }
+      button {
+        margin-left: 110px;
+      }
+      #results {
+        margin-top: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Filtry mieszkań</h1>
+    <form>
+      <div>
+        <label for="price">Cena (w zł):</label>
+        <input type="text" id="price" />
+      </div>
+      <div>
+        <label for="floor">Numer piętra:</label>
+        <input type="text" id="floor" />
+      </div>
+      <div>
+        <label for="area">Powierzchnia (w m<sup>2</sup>):</label>
+        <input type="number" id="area" />
+      </div>
+      <button type="button" onclick="filter()">Wybierz</button>
+    </form>
+    <div id="results"></div>
+    <script>
+      const data = [
+        { price: 200000, floor: 1, area:   60, link: "https://example.com/mieszkanie1" },
+        { price: 200000, floor: 3, area:  60, link: "https://example.com/mieszkanie2" },
+        { price: 200000, floor: 3, area:  60, link: "https://example.com/mieszkanie3" },
+        { price: 200000, floor: 4, area:  58.80, link: "https://example.com/mieszkanie4" },
+        { price: 200000, floor: 5, area:  58.80, link: "https://example.com/mieszkanie5" },
+      ];
+
+      function filter() {
+        const price = document.getElementById("price").value;
+        const floor = document.getElementById("floor").value;
+        const area = Number(document.getElementById("area").value);
+
+        const results = data.filter(
+          (d) =>
+            d.price === parseInt(price) &&
+            d.floor === parseInt(floor) &&
+             d.area  === parseInt(area) 
+          
+        );
+
+        if (results.length > 0) {
+          const result = results[0];
+          const message = `Wybrano mieszkanie o cenie ${result.price} i powierzchni ${result.area}. `;
+          const link = `<a href="${result.link}" target="_blank">Link do oferty</a>`;
+          document.getElementById("results").innerHTML = message + link;
+        } else {
+          document.getElementById("results").innerHTML =
+            "Nie znaleziono pasujących mieszkań.";
+        }
+      }
+    </script>
+  </body>
+</html> -->
