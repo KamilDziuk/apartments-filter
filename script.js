@@ -88,17 +88,19 @@
       ];
       // A function that selects apartments according to criteria
       function selectApartments() {
-        var building = (document.getElementById("building").value);
+        var building = (document.getElementById("form").building.value);
         // var buildingDo = (document.getElementById("buildingDo").value);
-        var cenaOd = Number(document.getElementById("cenaOd").value);
-        var cenaDo = Number(document.getElementById("cenaDo").value);
-        var powOd = Number(document.getElementById("powOd").value);
-        var powDo = Number(document.getElementById("powDo").value);
-        var floorsOd = Number(document.getElementById("floorsOd").value);
-        var floorsDo = Number(document.getElementById("floorsDo").value);
+        var cenaOd = Number(document.getElementById("form").cenaOd.value);
+        var cenaDo = Number(document.getElementById("form").cenaDo.value);
+        var powOd = Number(document.getElementById("form").powOd.value);
+        var powDo = Number(document.getElementById("form").powDo.value);
+        var floorsOd = Number(document.getElementById("form").floorsOd.value);
+        var floorsDo = Number(document.getElementById("form").floorsDo.value);
         var result = document.getElementById("result");
         result.innerHTML = "";
+        var found = false;
         apartments.forEach(function(apartment) {
+      
           if (
             apartment.building === building &&
             // (buildingDo === "" || apartment.building <= buildingDo) &&
@@ -112,7 +114,15 @@
             apartmentElement.innerHTML = "Cena: " + apartment.price + "zł | " + "Powierzchnia: "+ 
             apartment.surface + " m<sup>2</sup> | " + " Piętro: " + apartment.floors +" | Budynek: "+ 
             apartment.building + " | <a href='" + apartment.link + "' target='_blank'>Zobacz wynik wyszukiwania</a> ";
+            found = true;
             result.appendChild(apartmentElement);
               }
         });
+        if (!found) {
+          // add information about no results to the search results
+          var noResultsElement = document.createElement("div");
+          noResultsElement.innerHTML = "Nie znaleziono żadnych apartamentów spełniających podane kryteria.";
+          result.appendChild(noResultsElement);
+        }
       }
+      

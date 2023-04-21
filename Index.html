@@ -8,26 +8,26 @@
   <title>Apartment filters</title>
 </head>
 <body>
-    <form>
+    <form id="form" >
       <label>
        <!-- Building -->
-    <input type="text" id="building" placeholder="Budynek od A do C">  
+    <input type="text" name="building" placeholder="Budynek od A do C">  
     <!-- <input type="text" id="buildingDo" placeholder=" do">  -->
       </label>
     <label>
     <!-- Price: -->
-    <input type="number" id="cenaOd" placeholder="Cena od"> -
-    <input type="number" id="cenaDo" placeholder="do">
+    <input type="number" name="cenaOd" placeholder="Cena od"> -
+    <input type="number" name="cenaDo" placeholder="do">
     </label>
     <label>
     <!--Surface:-->
-    <input type="number" id="powOd" placeholder="Powierzchnia od"> -
-    <input type="number" id="powDo" placeholder="do">
+    <input type="number" name="powOd" placeholder="Powierzchnia od"> -
+    <input type="number" name="powDo" placeholder="do">
     </label>
     <label>
     <!-- Floors: -->
-    <input type="number" id="floorsOd" placeholder="Piętra od"> -
-    <input type="number" id="floorsDo" placeholder="do">
+    <input type="number" name="floorsOd" placeholder="Piętra od"> -
+    <input type="number" name="floorsDo" placeholder="do">
     </label>
     <!-- Button -->
     <button type="button" onclick="selectApartments()">Wybierz</button>
