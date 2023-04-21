@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -74,4 +74,67 @@
       }
     </script>
   </body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Przykład filtrowania apartamentów</title>
+</head>
+<body>
+    <form id="form">
+        <label>
+            Cena:
+            <input type="text" onkeypress="return isNumber(event)" name="cenaOd" placeholder="Cena od">
+            -
+            <input type="text" name="cenaDo" placeholder="Cena do">
+        </label>
+
+        <button type="button" name="submit" onclick="selectApartments()">Wybierz</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        var apartments = [
+            { price: 200.000, surface: 52.19, floors: 4, building: "D", link: "https://osiedle-paderewskiego.pl/budynek-d-m4-p4/" }
+        ];
+
+        function isNumber(event) {
+            var charCode = (event.which) ? event.which : event.keyCode;
+            if (charCode == 46) {
+                return true;
+            }
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                return false;
+            }
+            return true;
+        }
+
+        function selectApartments() {
+            var cenaOd = parseFloat(document.getElementById("form").cenaOd.value.replace(",", "."));
+            var cenaDo = parseFloat(document.getElementById("form").cenaDo.value.replace(",", "."));
+
+            var result = document.getElementById("result");
+            result.innerHTML = "";
+            var found = false;
+            apartments.forEach(function(apartment) {
+                if (
+                    (cenaOd == "" || apartment.price >= cenaOd) &&
+                    (cenaDo == "" || apartment.price <= cenaDo)
+                ) {
+                    var apartmentElement = document.createElement("div");
+                    apartmentElement.innerHTML = "Cena: " + apartment.price + " zł | " +
+                        "Powierzchnia: " + apartment.surface + " m<sup>2</sup> | " +
+                        "Piętro: " + apartment.floors + " | Budynek: " + apartment.building + " | " +
+                        "<a href='" + apartment.link + "' target='_blank'>Zobacz wynik wyszukiwania</a>";
+                    result.appendChild(apartmentElement);
+                    found = true;
+                }
+            });
+            if (!found) {
+                result.innerHTML = "Nie znaleziono apartamentów spełniających podane kryteria.";
+            }
+        }
+    </script>
+</body>
 </html>
