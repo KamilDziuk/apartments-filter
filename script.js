@@ -86,15 +86,17 @@
         { price: 200000, surface: 62.31, floors: 4, building: "D", link: "https://osiedle-paderewskiego.pl/budynek-d-m3-p4/" },
         { price: 200000, surface: 52.19, floors: 4, building: "D", link: "https://osiedle-paderewskiego.pl/budynek-d-m4-p4/" }
       ];
+      
       // A function that selects apartments according to criteria
       function selectApartments() {
         
         var building = (document.getElementById("form").building.value);
-        // var buildingDo = (document.getElementById("buildingDo").value);
-        var cenaOdStr = document.getElementById("form").cenaOd.value;
-        var cenaDoStr = document.getElementById("form").cenaDo.value;
-        var cenaOd = cenaOdStr === "" ? null : Number(cenaOdStr.replace(/[\.,]/g, ""));
-        var cenaDo = cenaDoStr === "" ? null : Number(cenaDoStr.replace(/[\.,]/g, ""));
+       var cenaOdStr = document.getElementById("form").priceForm.value;
+      var cenaDoStr = document.getElementById("form").priceTo.value;
+              //In the "selectApartments()" function, for the "Price from" and "to" fields, we first retrieve the values as text, then replace the dots and commas with empty strings using the "replace()" method. We then convert the text to a number using the "Number()" constructor. If the field value is empty, we set it to null. In the conditions, we check if the price value is greater or less than the minimum or maximum value, which is a numeric or null value. If the price value
+      var priceForm = cenaOdStr === "" ? null : Number(cenaOdStr.replace(/[\.,]/g, ""));
+      var priceTo = cenaDoStr === "" ? null : Number(cenaDoStr.replace(/[\.,]/g, ""));
+
         var powOd = Number(document.getElementById("form").powOd.value);
         var powDo = Number(document.getElementById("form").powDo.value);
         var floorsOd = Number(document.getElementById("form").floorsOd.value);
@@ -102,15 +104,16 @@
         var result = document.getElementById("result");
         result.innerHTML = "";
         var found = false;
-   
+        apartments.sort(function(a, b) {
+          return a.price - b.price;
+        });
         apartments.forEach(function(apartment) {
           
           
           if (
             apartment.building === building &&
-            // (buildingDo === "" || apartment.building <= buildingDo) &&
-            (cenaOd === "" || apartment.price >= cenaOd) &&
-              (cenaDo === "" || apartment.price <= cenaDo) &&
+            (priceForm === "" || apartment.price >= priceForm) &&
+              (priceTo === "" || apartment.price <= priceTo) &&
               (powOd === "" || apartment.surface >= powOd) &&
               (powDo === "" || apartment.surface <= powDo) &&
               (floorsDo === "" || apartment.floors <= floorsDo) &&
