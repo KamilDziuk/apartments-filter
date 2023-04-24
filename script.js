@@ -121,7 +121,7 @@
             var apartmentElement = document.createElement("div");
             apartmentElement.innerHTML = "Cena: " + apartment.price + "zł | " + "Powierzchnia: "+ 
             apartment.surface + " m<sup>2</sup> | " + " Piętro: " + apartment.floors +" | Budynek: "+ 
-            apartment.building + " | <a href='" + apartment.link + "' target='_blank'>Zobacz wynik wyszukiwania</a> ";
+            apartment.building + " | <a href='" + apartment.link + "' target='_blank'><span style='color:#858585;'>Zobacz wynik wyszukiwania</a> ";
             found = true;
             result.appendChild(apartmentElement);
               }
