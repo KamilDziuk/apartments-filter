@@ -119,9 +119,9 @@
               (floorsDo === "" || apartment.floors <= floorsDo) &&
               (floorsOd === "" || apartment.floors >= floorsOd)) {
             var apartmentElement = document.createElement("div");
-            apartmentElement.innerHTML = "Cena: " + apartment.price + "zł | " + "Powierzchnia: "+ 
-            apartment.surface + " m<sup>2</sup> | " + " Piętro: " + apartment.floors +" | Budynek: "+ 
-            apartment.building + " | <a href='" + apartment.link + "' target='_blank'><span style='color:#858585;'>Zobacz wynik wyszukiwania</a> ";
+            apartmentElement.innerHTML = "Cena: " + apartment.price.toFixed(2)  + "zł | " + "Powierzchnia: "+ 
+            apartment.surface.toFixed(2)  + " m<sup>2</sup> | " + " Piętro: " + apartment.floors +" | Budynek: "+ 
+            apartment.building + " | <button onclick=\"window.open('" + apartment.link + "', '_blank')\"><span style='color:#000000;'>Zobacz wynik wyszukiwania</span></button> ";
             found = true;
             result.appendChild(apartmentElement);
               }

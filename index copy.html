@@ -35,60 +35,134 @@
     <div id="result"></div>
 <script>
 
-
-      var apartments = [
-      
+var apartments = [
+{ price: 200000, surface: 58.80, floors: 0, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m1/" },
+        { price: 250000, surface: 30.15, floors: 0, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m2/" },
+        { price: 300000, surface: 49.20,floors: 0, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m3/" },
+        { price: 350000, surface: 48.60,floors: 0, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m4/" },
+        { price: 200000, surface: 52.35, floors: 1, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m1-p1/" },
+        { price: 200000, surface: 56.09, floors: 1, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m2-p1/" },
+        { price: 200000, surface: 30.16, floors: 1, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m3-p1/" },
+        { price: 200000, surface: 49.31, floors: 1, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m4-p1/" },
+        { price: 200000, surface: 48.60, floors: 1, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m5-p1/" },
+        { price: 200000, surface: 58.56, floors: 2, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m1-p2/" },
+        { price: 200000, surface: 70.70, floors: 2, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m2-p2/" },
+        { price: 200000, surface: 62.31, floors: 2, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m3-p2/" },
+        { price: 200000, surface: 52.19, floors: 2, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m4-p2/" },
+        { price: 200000, surface: 58.56, floors: 3, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m1-p3/" },
+        { price: 200000, surface: 70.70, floors: 3, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m2-p3/" },
+        { price: 200000, surface: 62.31, floors: 3, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m3-p3/" },
+        { price: 200000, surface: 52.19, floors: 3, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m4-p3/" },
+        { price: 200000, surface: 58.56, floors: 4, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m1-p4/" },
+        { price: 200000, surface: 70.70, floors: 4, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m2-p4/" },
+        { price: 200000, surface: 62.31, floors: 4, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m3-p4/" },
+        { price: 200000, surface: 52.19, floors: 4, building: "A", link: "https://osiedle-paderewskiego.pl/budynek-a-m4-p4/" },
+        { price: 200000, surface: 58.80, floors: 0, building: "B", link: "https://osiedle-paderewskiego.pl/budynek-b-m1/" },
+        { price: 250000, surface: 30.15, floors: 0, building: "B", link: "https://osiedle-paderewskiego.pl/budynek-b-m2/" },
+        { price: 300000, surface: 49.20,floors: 0, building: "B", link: "https://osiedle-paderewskiego.pl/budynek-b-m3/" },
+        { price: 350000, surface: 48.60,floors: 0, building: "B", link: "https://osiedle-paderewskiego.pl/budynek-b-m4/" },
+        { price: 200000, surface: 52.35, floors: 1, building: "B", link: "https://osiedle-paderewskiego.pl/budynek-b-m1-p1/" },
+        { price: 200000, surface: 56.09, floors: 1, building: "B", link: "https://osiedle-paderewskiego.pl/budynek-b-m2-p1/" },
+        { price: 200000, surface: 30.16, floors: 1, building: "B", link: "https://osiedle-paderewskiego.pl/budynek-b-m3-p1/" },
+        { price: 200000, surface: 49.31, floors: 1, building: "B", link: "https://osiedle-paderewskiego.pl/budynek-b-m4-p1/" },
+        { price: 200000, surface: 48.60, floors: 1, building: "B", link: "https://osiedle-paderewskiego.pl/budynek-b-m5-p1/" },
+        { price: 200000, surface: 58.56, floors: 2, building: "B", link: "https://osiedle-paderewskiego.pl/budynek-b-m1-p2/" },
+        { price: 200000, surface: 70.70, floors: 2, building: "B", link: "https://osiedle-paderewskiego.pl/budynek-b-m2-p2/" },
+        { price: 200000, surface: 62.31, floors: 2, building: "B", link: "https://osiedle-paderewskiego.pl/budynek-b-m3-p2/" },
+        { price: 200000, surface: 52.19, floors: 2, building: "B", link: "https://osiedle-paderewskiego.pl/budynek-b-m4-p2/" },
+        { price: 200000, surface: 58.56, floors: 3, building: "B", link: "https://osiedle-paderewskiego.pl/budynek-b-m1-p3/" },
+        { price: 200000, surface: 70.70, floors: 3, building: "B", link: "https://osiedle-paderewskiego.pl/budynek-b-m2-p3/" },
+        { price: 200000, surface: 62.31, floors: 3, building: "B", link: "https://osiedle-paderewskiego.pl/budynek-b-m3-p3/" },
+        { price: 200000, surface: 52.19, floors: 3, building: "B", link: "https://osiedle-paderewskiego.pl/budynek-b-m4-p3/" },
+        { price: 200000, surface: 58.56, floors: 4, building: "B", link: "https://osiedle-paderewskiego.pl/budynek-b-m1-p4/" },
+        { price: 200000, surface: 70.70, floors: 4, building: "B", link: "https://osiedle-paderewskiego.pl/budynek-b-m2-p4/" },
+        { price: 200000, surface: 62.31, floors: 4, building: "B", link: "https://osiedle-paderewskiego.pl/budynek-b-m3-p4/" },
+        { price: 200000, surface: 52.19, floors: 4, building: "B", link: "https://osiedle-paderewskiego.pl/budynek-b-m4-p4/" },
+        { price: 200000, surface: 58.80, floors: 0, building: "C", link: "https://osiedle-paderewskiego.pl/budynek-c-m1/" },
+        { price: 250000, surface: 30.15, floors: 0, building: "C", link: "https://osiedle-paderewskiego.pl/budynek-c-m2/" },
+        { price: 300000, surface: 49.20,floors: 0, building: "C", link: "https://osiedle-paderewskiego.pl/budynek-c-m3/" },
+        { price: 350000, surface: 48.60,floors: 0, building: "C", link: "https://osiedle-paderewskiego.pl/budynek-c-m4/" },
+        { price: 200000, surface: 52.35, floors: 1, building: "C", link: "https://osiedle-paderewskiego.pl/budynek-c-m1-p1/" },
+        { price: 200000, surface: 56.09, floors: 1, building: "C", link: "https://osiedle-paderewskiego.pl/budynek-c-m2-p1/" },
+        { price: 200000, surface: 30.16, floors: 1, building: "C", link: "https://osiedle-paderewskiego.pl/budynek-c-m3-p1/" },
+        { price: 200000, surface: 49.31, floors: 1, building: "C", link: "https://osiedle-paderewskiego.pl/budynek-c-m4-p1/" },
+        { price: 200000, surface: 48.60, floors: 1, building: "C", link: "https://osiedle-paderewskiego.pl/budynek-c-m5-p1/" },
+        { price: 200000, surface: 58.56, floors: 2, building: "C", link: "https://osiedle-paderewskiego.pl/budynek-c-m1-p2/" },
+        { price: 200000, surface: 70.70, floors: 2, building: "C", link: "https://osiedle-paderewskiego.pl/budynek-c-m2-p2/" },
+        { price: 200000, surface: 62.31, floors: 2, building: "C", link: "https://osiedle-paderewskiego.pl/budynek-c-m3-p2/" },
+        { price: 200000, surface: 52.19, floors: 2, building: "C", link: "https://osiedle-paderewskiego.pl/budynek-c-m4-p2/" },
+        { price: 200000, surface: 58.56, floors: 3, building: "C", link: "https://osiedle-paderewskiego.pl/budynek-c-m1-p3/" },
+        { price: 200000, surface: 70.70, floors: 3, building: "C", link: "https://osiedle-paderewskiego.pl/budynek-c-m2-p3/" },
+        { price: 200000, surface: 62.31, floors: 3, building: "C", link: "https://osiedle-paderewskiego.pl/budynek-c-m3-p3/" },
+        { price: 200000, surface: 52.19, floors: 3, building: "C", link: "https://osiedle-paderewskiego.pl/budynek-c-m4-p3/" },
+        { price: 200000, surface: 58.56, floors: 4, building: "C", link: "https://osiedle-paderewskiego.pl/budynek-c-m1-p4/" },
+        { price: 200000, surface: 70.70, floors: 4, building: "C", link: "https://osiedle-paderewskiego.pl/budynek-c-m2-p4/" },
+        { price: 200000, surface: 62.31, floors: 4, building: "C", link: "https://osiedle-paderewskiego.pl/budynek-c-m3-p4/" },
+        { price: 200000, surface: 52.19, floors: 4, building: "C", link: "https://osiedle-paderewskiego.pl/budynek-c-m4-p4/" },
+        { price: 200000, surface: 58.80, floors: 0, building: "D", link: "https://osiedle-paderewskiego.pl/budynek-d-m1/" },
+        { price: 250000, surface: 30.15, floors: 0, building: "D", link: "https://osiedle-paderewskiego.pl/budynek-d-m2/" },
+        { price: 300000, surface: 49.20,floors: 0, building: "D", link: "https://osiedle-paderewskiego.pl/budynek-d-m3/" },
+        { price: 350000, surface: 48.60,floors: 0, building: "D", link: "https://osiedle-paderewskiego.pl/budynek-d-m4/" },
+        { price: 200000, surface: 52.35, floors: 1, building: "D", link: "https://osiedle-paderewskiego.pl/budynek-d-m1-p1/" },
+        { price: 200000, surface: 56.09, floors: 1, building: "D", link: "https://osiedle-paderewskiego.pl/budynek-d-m2-p1/" },
+        { price: 200000, surface: 30.16, floors: 1, building: "D", link: "https://osiedle-paderewskiego.pl/budynek-d-m3-p1/" },
+        { price: 200000, surface: 49.31, floors: 1, building: "D", link: "https://osiedle-paderewskiego.pl/budynek-d-m4-p1/" },
+        { price: 200000, surface: 48.60, floors: 1, building: "D", link: "https://osiedle-paderewskiego.pl/budynek-d-m5-p1/" },
+        { price: 200000, surface: 58.56, floors: 2, building: "D", link: "https://osiedle-paderewskiego.pl/budynek-d-m1-p2/" },
+        { price: 200000, surface: 70.70, floors: 2, building: "D", link: "https://osiedle-paderewskiego.pl/budynek-d-m2-p2/" },
+        { price: 200000, surface: 62.31, floors: 2, building: "D", link: "https://osiedle-paderewskiego.pl/budynek-d-m3-p2/" },
+        { price: 200000, surface: 52.19, floors: 2, building: "D", link: "https://osiedle-paderewskiego.pl/budynek-d-m4-p2/" },
+        { price: 200000, surface: 58.56, floors: 3, building: "D", link: "https://osiedle-paderewskiego.pl/budynek-d-m1-p3/" },
+        { price: 200000, surface: 70.70, floors: 3, building: "D", link: "https://osiedle-paderewskiego.pl/budynek-d-m2-p3/" },
+        { price: 200000, surface: 62.31, floors: 3, building: "D", link: "https://osiedle-paderewskiego.pl/budynek-d-m3-p3/" },
+        { price: 200000, surface: 52.19, floors: 3, building: "D", link: "https://osiedle-paderewskiego.pl/budynek-d-m4-p3/" },
+        { price: 200000, surface: 58.56, floors: 4, building: "D", link: "https://osiedle-paderewskiego.pl/budynek-d-m1-p4/" },
+        { price: 200000, surface: 70.70, floors: 4, building: "D", link: "https://osiedle-paderewskiego.pl/budynek-d-m2-p4/" },
+        { price: 200000, surface: 62.31, floors: 4, building: "D", link: "https://osiedle-paderewskiego.pl/budynek-d-m3-p4/" },
         { price: 200000, surface: 52.19, floors: 4, building: "D", link: "https://osiedle-paderewskiego.pl/budynek-d-m4-p4/" }
-      ];
-      
-     
-      function selectApartments() {
-        
-        var building = (document.getElementById("form").building.value);
-       var cenaOdStr = document.getElementById("form").priceForm.value;
-      var cenaDoStr = document.getElementById("form").priceTo.value;
+];
 
-      var priceForm = cenaOdStr === "" ? null : Number(cenaOdStr.replace(/[\.,]/g, ""));
-      var priceTo = cenaDoStr === "" ? null : Number(cenaDoStr.replace(/[\.,]/g, ""));
-
-        var powOd = Number(document.getElementById("form").powOd.value);
-        var powDo = Number(document.getElementById("form").powDo.value);
-        var floorsOd = Number(document.getElementById("form").floorsOd.value);
-        var floorsDo = Number(document.getElementById("form").floorsDo.value);
-        var result = document.getElementById("result");
-        result.innerHTML = "";
-        var found = false;
-        apartments.sort(function(a, b) {
-          return a.price - b.price;
-        });
-        apartments.forEach(function(apartment) {
-          
-          
-          if (
-            apartment.building === building &&
-            (priceForm === "" || apartment.price >= priceForm) &&
-              (priceTo === "" || apartment.price <= priceTo) &&
-              (powOd === "" || apartment.surface >= powOd) &&
-              (powDo === "" || apartment.surface <= powDo) &&
-              (floorsDo === "" || apartment.floors <= floorsDo) &&
-              (floorsOd === "" || apartment.floors >= floorsOd)) {
-            var apartmentElement = document.createElement("div");
-            apartmentElement.innerHTML = "Cena: " + apartment.price + "zł | " + "Powierzchnia: "+ 
-            apartment.surface + " m<sup>2</sup> | " + " Piętro: " + apartment.floors +" | Budynek: "+ 
-            apartment.building + " | <a href='" + apartment.link + "' target='_blank'>Zobacz wynik wyszukiwania</a> ";
-            found = true;
-            result.appendChild(apartmentElement);
-              }
-        });
-        if (!found) {
-          // add information about no results to the search results
-          var noResultsElement = document.createElement("div");
-          noResultsElement.innerHTML = "Nie znaleziono żadnych apartamentów spełniających podane kryteria.";
-          result.appendChild(noResultsElement);
-        }
-      }
-      
-
+function selectApartments() {
+  var building = document.getElementById("form").building.value;
+  var cenaOdStr = document.getElementById("form").priceForm.value;
+  var cenaDoStr = document.getElementById("form").priceTo.value;
+  var priceForm = cenaOdStr === "" ? null : parseFloat(cenaOdStr.replace(/[\.,]/g, ""));
+  var priceTo = cenaDoStr === "" ? null : parseFloat(cenaDoStr.replace(/[\.,]/g, ""));
+  var powOd = parseFloat(document.getElementById("form").powOd.value);
+  var powDo = parseFloat(document.getElementById("form").powDo.value);
+  var floorsOd = parseFloat(document.getElementById("form").floorsOd.value);
+  var floorsDo = parseFloat(document.getElementById("form").floorsDo.value);
+  var result = document.getElementById("result");
+  result.innerHTML = "";
+  var found = false;
+  apartments.sort(function(a, b) {
+    return a.price - b.price;
+  });
+  apartments.forEach(function(apartment) {
+    if (
+      apartment.building === building &&
+      (priceForm === null || apartment.price >= priceForm) &&
+      (priceTo === null || apartment.price <= priceTo) &&
+      (powOd === null || apartment.surface >= powOd) &&
+      (powDo === null || apartment.surface <= powDo) &&
+      (floorsDo === null || apartment.floors <= floorsDo) &&
+      (floorsOd === null || apartment.floors >= floorsOd)
+    ) {
+      var apartmentElement = document.createElement("div");
+      apartmentElement.innerHTML = "Cena: " + apartment.price.toFixed(2) + " zł | " + "Powierzchnia: " + 
+      apartment.surface.toFixed(2) + " m<sup>2</sup> | " + " Piętro: " + apartment.floors +" | Budynek: "+ 
+      apartment.building + " | <a href='" + apartment.link + "' target='_blank'>Zobacz wynik wyszukiwania</a> ";
+      found = true;
+      result.appendChild(apartmentElement);
+    }
+  });
+  if (!found) {
+    // add information about no results to the search results
+    var noResultsElement = document.createElement("div");
+    noResultsElement.innerHTML = "Nie znaleziono żadnych apartamentów spełniających podane kryteria.";
+    result.appendChild(noResultsElement);
+  }
+}
 </script>
 <style>
   body {
@@ -112,10 +186,12 @@ label {
 input[type="text"],
 input[type="number"] {
   max-width: 300px;
-  padding: 3 3 3 9px;
+  padding: 10 10 10 9px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+
+
 
 input[type="text"]:focus,
 input[type="number"]:focus {
@@ -123,6 +199,27 @@ input[type="number"]:focus {
   border-color: #EFEFED;
   max-width: 300px;
   padding: 3 3 3 9px;
+}
+button{
+  background-color: #EFEFED;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 10px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+button:hover{
+  background-color: #acacac;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 10px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+button[name="submit"]:hover {
 }
 
 button[name="submit"] {
@@ -132,10 +229,12 @@ button[name="submit"] {
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
+  border: 1px solid #ccc;
 }
 
 button[name="submit"]:hover {
   background-color: #EFEFED;
+  background-color: #acacac;
 }
 
 #result {
@@ -143,7 +242,17 @@ button[name="submit"]:hover {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  color: #000000;
+  
 }
+div{
+  /* border: 1px solid #ccc; */
+  margin-bottom: 15px;
+  max-width: 700px;
+  
+
+}
+
 @media (max-width: 600px) {
   form {
     max-width: 90%;
