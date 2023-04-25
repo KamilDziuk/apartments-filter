@@ -101,12 +101,33 @@
         var powDo = Number(document.getElementById("form").powDo.value);
         var floorsOd = Number(document.getElementById("form").floorsOd.value);
         var floorsDo = Number(document.getElementById("form").floorsDo.value);
+        var sortPriceCheckbox = document.getElementById("sort-price-checkbox");
+        var sortSurfaceCheckbox = document.getElementById("sort-surface-checkbox");
         var result = document.getElementById("result");
         result.innerHTML = "";
         var found = false;
-        apartments.sort(function(a, b) {
-          return a.price - b.price;
-        });
+        // Sort function
+  var sortByPriceAsc = function(a, b) {
+    return a.price - b.price;
+  };
+  var sortByPriceDesc = function(a, b) {
+    return b.price - a.price;
+  };
+  var sortBySurfaceAsc = function(a, b) {
+    return a.surface - b.surface;
+  };
+  var sortBySurfaceDesc = function(a, b) {
+    return b.surface - a.surface;
+  };
+  
+  // Sorting based on selected checkboxes
+  if (sortPriceCheckbox.checked && sortSurfaceCheckbox.checked) {
+    apartments.sort(sortByPriceAsc).sort(sortBySurfaceAsc);
+  } else if (sortPriceCheckbox.checked) {
+    apartments.sort(sortByPriceAsc);
+  } else if (sortSurfaceCheckbox.checked) {
+    apartments.sort(sortBySurfaceAsc);
+  }
         apartments.forEach(function(apartment) {
           
           
