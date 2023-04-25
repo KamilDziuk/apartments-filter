@@ -164,4 +164,35 @@
           result.appendChild(noResultsElement);
         }
       }
+      function updateFloors() {
+        var floors = Number(document.getElementById("form").floors.value);
+        document.getElementById("form").floorsDo.min = floors;
+        if (Number(document.getElementById("form").floorsDo.value) < floors) {
+          document.getElementById("form").floorsDo.value = floors;
+        }
+      }
+      function updatePrice() {
+        var price = Number(document.getElementById("form").price.value);
+        document.getElementById("form").priceTo.min = price;
+        if (Number(document.getElementById("form").priceTo.value) < price) {
+          document.getElementById("form").priceTo.value = price;
+        }
+      }
+
+      function updatePow() {
+        var pow = Number(document.getElementById("form").pow.value);
+        document.getElementById("form").powDo.min = pow;
+        if (Number(document.getElementById("form").powDo.value) < pow) {
+          document.getElementById("form").powDo.value = pow;
+        }
+      }
       
+      function updatePow() {
+        var pow = Number(document.getElementById("form").pow.value);
+        document.getElementById("form").powDo.min = pow;
+        if (Number(document.getElementById("form").powDo.value) < pow) {
+          document.getElementById("form").powDo.value = pow;
+        }
+      }
+
+

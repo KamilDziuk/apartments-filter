@@ -67,7 +67,6 @@ button[name="submit"] {
 
 button[name="submit"]:hover {
   background-color: #EFEFED;
-  background-color: #acacac;
 }
 
 #result {
@@ -80,7 +79,7 @@ button[name="submit"]:hover {
 }
 div{
   /* border: 1px solid #ccc; */
-  margin-bottom: 15px;
+  margin-bottom: 17px;
   max-width: 700px;
   
 

@@ -16,19 +16,34 @@
       </label>
     <label>
     <!-- Price: -->
-    <input type="number" name="priceForm" placeholder="Cena od"> -
+    <input type="number" name="priceForm" placeholder="Cena od"> 
+  </label>
+  <input type="range" name="price" min="0" max="600000" value="0" oninput="priceForm.value = price.value; updatePrice()">
+  <label>
     <input type="number" name="priceTo" placeholder="do">
-    </label>
-    <label>
-    <!--Surface:-->
-    <input type="number" name="powOd" placeholder="Powierzchnia od"> -
+  </label>
+
+
+
+  <label>
+    <input type="number" name="powOd" placeholder="Powierzchnia"> 
+  </label>
+  <input type="range" name="pow" min="0" max="90" value="0" oninput="powOd.value = pow.value; updatePow()">
+  <label>
     <input type="number" name="powDo" placeholder="do">
-    </label>
-    <label>
-    <!-- Floors: -->
-    <input type="number" name="floorsOd" placeholder="Piętra od"> -
+  </label>
+
+
+
+  <label>
+    <input type="number" name="floorsOd" placeholder="Piętra od">
+  </label>
+  <input type="range" name="floors" min="0" max="5" value="0" oninput="floorsOd.value = floors.value; updateFloors()">
+  <label>
     <input type="number" name="floorsDo" placeholder="do">
-    </label>
+  </label>
+   
+   
 <!-- Sort: price/surface -->
     <label>
       Filtruj <br>
