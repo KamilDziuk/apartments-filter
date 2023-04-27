@@ -84,27 +84,6 @@ div{
   
 
 }
-
-@media (max-width: 600px) {
-  form {
-    max-width: 90%;
-  }
-  
-  input[type="number"] {
-    width: 200px;
-    margin-right: 0px;
-    margin-bottom: 5px;
-  }
-  
-  button {
-    width: 100px;
-  }
-  
-  #wyniki {
-    max-width: 90%;
-  }
- 
-}
 #floorsList {
   position: absolute;
   background-color: white;
@@ -124,4 +103,24 @@ div{
 #floorsList li:hover {
   background-color: #f2f2f2;
   border: 1px solid #ccc;
+}
+@media (max-width: 600px) {
+  form {
+    max-width: 90%;
+  }
+  
+  input[type="number"] {
+    width: 200px;
+    margin-right: 0px;
+    margin-bottom: 5px;
+  }
+  
+  button {
+    width: 100px;
+  }
+  
+  #wyniki {
+    max-width: 90%;
+  }
+ 
 }

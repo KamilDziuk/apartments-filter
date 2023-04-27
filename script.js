@@ -197,18 +197,26 @@
           document.getElementById("form").powDo.value = pow;
         }
       }
-      function expandList() {
-        document.getElementById("floorsList").style.display = "block";
-      }
-      function selectFloor(floor) {
-        document.getElementsByName("floorsDo")[0].value = floor;
-        document.getElementsByName("floorsOd")[0].value = floor;
-        var value = document.getElementsByName("floorsDo")[0].value;
-        var value = document.getElementsByName("floorsOd")[0].value;
- 
-        document.getElementsByName("floors")[0].value = value / 1;
+    //   }
+    //   function expandList(listId) {
+    //     var list = document.getElementById(listId);
+    //     if (list.style.display === "none") {
+    //         list.style.display = "block";
+    //     } else {
+    //         list.style.display = "none";
+    //     }
+    // }
+
+    //   function expandList() {
+    //     document.getElementById("floorsList").style.display = "block";
+        
+    //   }
+    //   function selectFloor(floor) {
+    //     document.getElementsByName("floorsDo")[0].value = floor;
+    //     document.getElementsByName("floorsOd")[0].value = floor;
+    //     var value = document.getElementsByName("floorsDo")[0].value;
+    //     var value = document.getElementsByName("floorsOd")[0].value;
+    //     document.getElementsByName("floors")[0].value = value / 1;
+       
+    //   }
   
-      }
-      
-
-

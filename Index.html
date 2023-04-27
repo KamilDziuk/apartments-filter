@@ -35,20 +35,20 @@
 
 
   <label>
-    <input type="number" name="floorsOd" placeholder="Piętra od" onclick="expandList()"  >
+    <input type="number" name="floorsOd" placeholder="Piętra od"   >
 
-    <ul id="floorsList" style="display: none;">
+    <!-- <ul id="floorsList" style="display: none;">
       <li onclick="selectFloor(0)">0</li>
       <li onclick="selectFloor(1)">1</li>
       <li onclick="selectFloor(2)">2</li>
       <li onclick="selectFloor(3)">3</li>
-      <li onclick="selectFloor(4)">4</li>
+      <li onclick="selectFloor(4)">4</li> -->
      
     </ul>
  
     <input type="range" name="floors" min="0" max="4" value="0" oninput="floorsOd.value = floors.value; updateFloors()">
 
-    <input type="number" name="floorsDo" placeholder="do"  onclick="expandList()">
+    <input type="number" name="floorsDo" placeholder="do">
  
    
    
@@ -60,8 +60,10 @@
       <input type="checkbox" id="sort-most-surface-checkbox"> m<sup>2</sup>  ros
       <input type="checkbox" id="sort-least-surface-checkbox"> m<sup>2</sup>  mal
     </label>
+    <label>
     <!-- Button -->
     <button type="button" name="submit" onclick="selectApartments()">Wybierz</button>
+    </label>
     </form>
     <div id="result"></div>
 
