@@ -164,9 +164,12 @@
           result.appendChild(noResultsElement);
         }
       }
+      
       function updateFloors() {
+        
         var floors = Number(document.getElementById("form").floors.value);
         document.getElementById("form").floorsDo.min = floors;
+        
         if (Number(document.getElementById("form").floorsDo.value) < floors) {
           document.getElementById("form").floorsDo.value = floors;
         }
@@ -194,5 +197,18 @@
           document.getElementById("form").powDo.value = pow;
         }
       }
+      function expandList() {
+        document.getElementById("floorsList").style.display = "block";
+      }
+      function selectFloor(floor) {
+        document.getElementsByName("floorsDo")[0].value = floor;
+        document.getElementsByName("floorsOd")[0].value = floor;
+        var value = document.getElementsByName("floorsDo")[0].value;
+        var value = document.getElementsByName("floorsOd")[0].value;
+ 
+        document.getElementsByName("floors")[0].value = value / 1;
+  
+      }
+      
 
 

@@ -103,4 +103,25 @@ div{
   #wyniki {
     max-width: 90%;
   }
+ 
+}
+#floorsList {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  padding: 0;
+  z-index: 1;
+
+}
+#floorsList li {
+  list-style: none;
+  padding: 5px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  
+}
+#floorsList li:hover {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
 }

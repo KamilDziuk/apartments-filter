@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pole liczbowe z listą wyboru</title>
+</head>
+<body>
+	<label>Wybierz liczbę:</label>
+	<input type="number" id="number-input">
+	<select id="number-list" style="display: none;">
+		<option value="1">1</option>
+		<option value="2">2</option>
+	</select>
+
+	<script>
+		const numberInput = document.getElementById('number-input');
+		const numberList = document.getElementById('number-list');
+
+		numberInput.addEventListener('click', () => {
+			numberList.style.display = 'block';
+		});
+
+		numberList.addEventListener('change', () => {
+			numberInput.value = numberList.value;
+			numberList.style.display = 'none';
+		});
+	</script>
+</body>
+</html>

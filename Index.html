@@ -17,9 +17,9 @@
     <label>
     <!-- Price: -->
     <input type="number" name="priceForm" placeholder="Cena od"> 
-  </label>
+  
   <input type="range" name="price" min="0" max="600000" value="0" oninput="priceForm.value = price.value; updatePrice()">
-  <label>
+ 
     <input type="number" name="priceTo" placeholder="do">
   </label>
 
@@ -27,21 +27,29 @@
 
   <label>
     <input type="number" name="powOd" placeholder="Powierzchnia"> 
-  </label>
+ 
   <input type="range" name="pow" min="0" max="90" value="0" oninput="powOd.value = pow.value; updatePow()">
-  <label>
+
     <input type="number" name="powDo" placeholder="do">
   </label>
 
 
+  <label>
+    <input type="number" name="floorsOd" placeholder="Piętra od" onclick="expandList()"  >
 
-  <label>
-    <input type="number" name="floorsOd" placeholder="Piętra od">
-  </label>
-  <input type="range" name="floors" min="0" max="5" value="0" oninput="floorsOd.value = floors.value; updateFloors()">
-  <label>
-    <input type="number" name="floorsDo" placeholder="do">
-  </label>
+    <ul id="floorsList" style="display: none;">
+      <li onclick="selectFloor(0)">0</li>
+      <li onclick="selectFloor(1)">1</li>
+      <li onclick="selectFloor(2)">2</li>
+      <li onclick="selectFloor(3)">3</li>
+      <li onclick="selectFloor(4)">4</li>
+     
+    </ul>
+ 
+    <input type="range" name="floors" min="0" max="4" value="0" oninput="floorsOd.value = floors.value; updateFloors()">
+
+    <input type="number" name="floorsDo" placeholder="do"  onclick="expandList()">
+ 
    
    
 <!-- Sort: price/surface -->
