@@ -1,72 +1,50 @@
 <!DOCTYPE html>
-
 <script src="script.js"></script>
 <html>
 <head>
-  <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-  <title>Apartment filters</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<title>Apartment filters</title>
 </head>
 <body>
-    <form id="form" >
-      <label>
-       <!-- Building -->
-    <input type="text" name="building" placeholder="Budynek od A do C">  
-    <!-- <input type="text" id="buildingDo" placeholder=" do">  -->
-      </label>
-    <label>
-    <!-- Price: -->
-    <input type="number" name="priceForm" placeholder="Cena od"> 
-  
-  <input type="range" name="price" min="0" max="600000" value="0" oninput="priceForm.value = price.value; updatePrice()">
- 
-    <input type="number" name="priceTo" placeholder="do">
-  </label>
-
-
-
-  <label>
-    <input type="number" name="powOd" placeholder="Powierzchnia"> 
- 
-  <input type="range" name="pow" min="0" max="90" value="0" oninput="powOd.value = pow.value; updatePow()">
-
-    <input type="number" name="powDo" placeholder="do">
-  </label>
-
-
-  <label>
-    <input type="number" name="floorsOd" placeholder="Piętra od"   >
-
-    <!-- <ul id="floorsList" style="display: none;">
-      <li onclick="selectFloor(0)">0</li>
-      <li onclick="selectFloor(1)">1</li>
-      <li onclick="selectFloor(2)">2</li>
-      <li onclick="selectFloor(3)">3</li>
-      <li onclick="selectFloor(4)">4</li> -->
-     
-    </ul>
- 
-    <input type="range" name="floors" min="0" max="4" value="0" oninput="floorsOd.value = floors.value; updateFloors()">
-
-    <input type="number" name="floorsDo" placeholder="do">
- 
-   
-   
-<!-- Sort: price/surface -->
-    <label>
-      Filtruj <br>
-      <input type="checkbox" id="sort-most-price-checkbox"> Cena ros
-      <input type="checkbox" id="sort-least-price-checkbox"> Cena mal
-      <input type="checkbox" id="sort-most-surface-checkbox"> m<sup>2</sup>  ros
-      <input type="checkbox" id="sort-least-surface-checkbox"> m<sup>2</sup>  mal
-    </label>
-    <label>
-    <!-- Button -->
-    <button type="button" name="submit" onclick="selectApartments()">Wybierz</button>
-    </label>
-    </form>
-    <div id="result"></div>
-
-    </body>
-    </html>
+<form id="form" >
+<label>
+  Budynek<br>
+<input type="text" name="building" placeholder=" A-C">  
+</label>
+<label>
+Cena(zł)<br>
+<input type="number" name="priceForm" placeholder=" od"> 
+<input type="range" name="price" min="0" max="600000" value="0" oninput="priceForm.value = price.value; updatePrice()">
+<input type="number" name="priceTo" placeholder=" do">
+</label>
+<label>
+Powierzchnia<br>
+<input type="number" name="powOd" placeholder=" od"> 
+<input type="range" name="pow" min="0" max="90" value="0" oninput="powOd.value = pow.value; updatePow()">
+<input type="number" name="powDo" placeholder=" do">
+</label>
+<label>
+  Piętra<br>
+<input type="number" name="floorsOd" placeholder=" od"   >
+</ul>
+<input type="range" name="floors" min="0" max="4" value="0" oninput="floorsOd.value = floors.value; updateFloors()">
+<input type="number" name="floorsDo" placeholder=" do">
+<label>
+  <br>
+Filtruj <br>
+<form class="checkbox-filter">
+<input type="checkbox" id="sort-most-price-checkbox"> Cena max
+<input type="checkbox" id="sort-least-price-checkbox"> Cena min
+<input type="checkbox" id="sort-most-surface-checkbox"> m<sup>2</sup> max
+<input type="checkbox" id="sort-least-surface-checkbox"> m<sup>2</sup> min
+</label>
+</form>
+<label>
+<button type="button" name="submit" onclick="selectApartments()">Wybierz</button>
+</label>
+</form>
+<div id="result"></div>
+</body>
+</html>
   
