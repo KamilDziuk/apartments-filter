@@ -1,215 +1,123 @@
-@import url('https://fonts.googleapis.com/css2?family=Arsenal&display=swap');
-body {
-  
-  font-family: 'Arsenal', sans-serif;
-  background-color: #f0f0f0;
-  
-}
-
-form {
-  background-color: #fff;
-  padding: 20px;
-  font-size: 17px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
-
-label {
-  display: block;
-  margin-bottom: 10px;
-}
-input[type="text"],
-input[type="number"] {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  font-size: 17px;
-  color: #666;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-
-}
-
-input[type="text"],
-input[type="number"]:focus {
-  outline: none;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
-  background-color: #e0e0e0;
-}
-
-button{
-  background-color: #EFEFED;
-  color: #000;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 10px;
-  cursor: pointer;
-  border: 1px solid #ccc;
-}
-button:hover{
-  background-color: #acacac;
-  color: #000;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 10px;
-  cursor: pointer;
-  border: 1px solid #ccc;
-}
-
-button[name="submit"]:hover {
-}
-
-button[name="submit"] {
-  background-color: #EFEFED;
-  color: #000;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-  border: 1px solid #ccc;
-}
-
-button[name="submit"]:hover {
-  background-color: #EFEFED;
-}
-
-#result {
-  background-color: #fff;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  color: #000000;
-  
-}
-div{
-  /* border: 1px solid #ccc; */
-  margin-bottom: 17px;
-
-  
-
-}
-
-
-input[type=range] {
-  -webkit-appearance: none;
-  width: 20%;
-  height: 10px;
-  margin: 10px 0;
-  background-color: #ddd;
-  border-radius: 10px;
-
-}
-
-input[type=range]:focus {
-
-}
-
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 30px;
-  height: 30px;
-  background-color: #000000;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-input[type=range]::-moz-range-thumb {
-  width: 30px;
-  height: 30px;
-  background-color: #000000;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-
-
-@media (max-width: 600px) {
-  @import url('https://fonts.googleapis.com/css2?family=Arsenal&display=swap');
 
 body {
-font-family: 'Arsenal', sans-serif;
 
 }
 
+
 form {
-
-padding: 10px;
-
-border-radius: 5px;
-margin-bottom: 10px;
-font-size: 18px;
 max-width: 100%;
+
+
 }
 
 label {
 display: block;
-margin-bottom: 5px;
-
+margin-bottom: 10px;
 }
 
 input[type="text"],
-input[type="number"] {
-padding: px;
-border: none;
-border-radius: 5px;
-background-color: #f2f2f2;
-font-size: 18px;
-color: #666;
-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-max-width: 65px;
+input[type="number"],
+input[type="range"] {
+display: inline-block;
+width: 100px;
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 3px;
+margin-right: 10px;
+max-width: 100%;
 }
 
 
-button{
+
+.checkbox-filter {
+display: flex;
+flex-direction: column;
+}
+
+button[type="button"] {
+display: block;
+margin-top: 20px;
+padding: 10px;
+border: none;
+border-radius: 3px;
 background-color: #EFEFED;
 color: #000;
-border: none;
-border-radius: 5px;
-padding: 5px 5px;
 cursor: pointer;
-border: 1px solid #ccc;
-font-size: 18px;
+font-size: 16px;
 }
 
-button:hover{
-background-color: #acacac;
-color: #000;
-border: none;
-border-radius: 5px;
-padding: 5px 5px;
-cursor: pointer;
-border: 1px solid #ccc;
+button[type="button"]:hover {
+  background-color: #EFEFED;
 }
 
-button[name="submit"] {
-background-color: #EFEFED;
-color: #000;
-border: none;
-border-radius: 5px;
-padding: 5px 10px;
-cursor: pointer;
-border: 1px solid #ccc;
-}
-
-button[name="submit"]:hover {
-background-color: #EFEFED;
-}
 
 #result {
-background-color: #fff;
-padding: 10px;
+margin-top: 20px;
+padding: 20px;
 border: 1px solid #ccc;
 border-radius: 5px;
-color: #000000;
+background-color: #fff;
 }
 
-div{
+#result > div {
 margin-bottom: 10px;
-
+padding-bottom: 10px;
+border-bottom: 1px solid #ccc;
 }
+
+#result > div:last-child {
+margin-bottom: 0;
+padding-bottom: 0;
+border-bottom: none;
+max-width: 100%;
+}
+
+#result a {
+  color: #000;
+text-decoration: none;
+}
+
+#result a:hover {
+text-decoration: underline;
+}
+
+
+input[type="checkbox"] {
+margin-right: 5px;
+}
+form input[type=text]
+{
+  width: 150px;
+}
+
+label[for="sort-most-price-checkbox"],
+label[for="sort-least-price-checkbox"] {
+  color: #000;
+font-weight: bold;
+}
+
+label[for="sort-most-surface-checkbox"],
+label[for="sort-least-surface-checkbox"] {
+cocolor: #000;
+font-weight: bold;
+}
+
+label[for="sort-most-price-checkbox"]:before,
+label[for="sort-least-price-checkbox"]:before,
+label[for="sort-most-surface-checkbox"]:before,
+label[for="sort-least-surface-checkbox"]:before {
+content: "\2610";
+margin-right: 5px;
+}
+
+input[type="checkbox"]:checked + label:before {
+content: "\2611";
+}
+
+
 input[type=range] {
   -webkit-appearance: none;
-  width: 21%;
+  width: 200px;
   height: 10px;
   margin: 10px 0;
   background-color: #ddd;
@@ -236,5 +144,13 @@ input[type=range]::-moz-range-thumb {
   background-color: #000000;
   border-radius: 50%;
   cursor: pointer;
+
+  
 }
+
+.column {
+display: inline-block;
+vertical-align: top;
+width: 25%;
+padding: 0 10px;
 }
